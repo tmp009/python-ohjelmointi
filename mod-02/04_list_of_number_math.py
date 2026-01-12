@@ -1,0 +1,13 @@
+import math
+
+num1 = int(input("Enter the first integer: "))
+num2 = int(input("Enter the second integer: "))
+num3 = int(input("Enter the third integer: "))
+numbers = [num1, num2, num3]
+sum_of_numbers = sum(numbers)
+average_of_numbers = sum_of_numbers / 3
+product_of_numbers = math.prod(numbers)
+
+print(f"The sum of the numbers: {sum_of_numbers}")
+print(f"The product of the numbers: {product_of_numbers}")
+print(f"The average of the numbers: {average_of_numbers}")
