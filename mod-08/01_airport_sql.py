@@ -20,12 +20,16 @@ def get_airport_by_icao(icao_code):
     finally:
         cursor.close()
 
-ecao_input = input("Enter the ICAO code of an airport: ").upper().strip()
+def run_airport_program():
+  icao_input = input("Enter the ICAO code of an airport: ").upper().strip()
 
 
-rows = get_airport_by_icao(ecao_input)
+  rows = get_airport_by_icao(icao_input)
 
-if not rows:
-    print(f"No airport found with ICAO code {ecao_input}", end='')
-else:
-    print(f"Airport name: {rows['name']}\nLocation: {rows['municipality']}", end="")
+  if not rows:
+      print(f"No airport found with ICAO code {icao_input}", end='')
+  else:
+      print(f"Airport name: {rows['name']}\nLocation: {rows['municipality']}", end="")
+
+
+run_airport_program()
